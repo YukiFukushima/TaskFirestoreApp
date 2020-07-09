@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskMakeTableViewController" customModule="TaskFirebaseAuthApp2" customModuleProvider="target">
+            <connections>
+                <outlet property="groupNameLabel" destination="Jyq-ig-sdg" id="16i-kH-7JW"/>
+                <outlet property="makeGroupTableView" destination="BLO-zc-kIA" id="CdL-8O-KFG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="グループ名を入れてください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jyq-ig-sdg">
+                    <rect key="frame" x="62.5" y="80" width="250" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="Uif-Up-9jz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urq-aN-Jom">
+                    <rect key="frame" x="60" y="577" width="255" height="30"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="作成">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="makeGroupBtn:" destination="-1" eventType="touchUpInside" id="ljt-rg-w88"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BLO-zc-kIA">
+                    <rect key="frame" x="0.0" y="134" width="375" height="423"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="urq-aN-Jom" firstAttribute="top" secondItem="BLO-zc-kIA" secondAttribute="bottom" constant="20" id="A9B-bw-CEY"/>
+                <constraint firstItem="BLO-zc-kIA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CDB-AL-2F3"/>
+                <constraint firstItem="Jyq-ig-sdg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="RWT-oV-bHo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="urq-aN-Jom" secondAttribute="trailing" constant="60" id="daz-CH-f85"/>
+                <constraint firstItem="urq-aN-Jom" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ezy-zl-onR"/>
+                <constraint firstItem="Jyq-ig-sdg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="j2K-Xr-Pvd"/>
+                <constraint firstItem="BLO-zc-kIA" firstAttribute="top" secondItem="Jyq-ig-sdg" secondAttribute="bottom" constant="20" id="nbQ-Wv-XJ5"/>
+                <constraint firstItem="urq-aN-Jom" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="oW7-87-obI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="urq-aN-Jom" secondAttribute="bottom" constant="60" id="wro-u1-I2I"/>
+                <constraint firstAttribute="trailing" secondItem="BLO-zc-kIA" secondAttribute="trailing" id="zuH-d2-T8k"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="135.38230884557723"/>
+        </view>
+    </objects>
+</document>
